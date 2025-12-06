@@ -253,4 +253,3 @@ end)
 
 print("AdoptMe Kai Hub")
 
-loadstring(game:HttpGet("https://pastefy.app/l8kOIgSz/raw"))()
