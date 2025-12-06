@@ -1,6 +1,3 @@
--- FULLY DUAL HOOKABLE VERSION (Can be hooked by other scripts)
--- REMOVED ALL SELF-PROTECTION - Pure execution only
-
 shared.LoaderTitle = "Loading Script Please wait...";
 shared.LoaderKeyFrames = {
     [1] = {30, 10},
