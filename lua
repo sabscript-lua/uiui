@@ -370,7 +370,7 @@ toggleCorner.CornerRadius = UDim.new(1, 0)
 toggleCorner.Parent = toggleBtn
 toggleBtn.MouseButton1Click:Connect(function()
 mainFrame.Visible = not mainFrame.Visible
-toggleBtn.Text = mainFrame.Visible and "â‰¡" or "â–¶"
+toggleBtn.Text = mainFrame.Visible and "🔗" or "❎"
 end)
 local uiScale = Instance.new("UIScale")
 uiScale.Scale = 1
