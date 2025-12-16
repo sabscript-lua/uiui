@@ -1,9 +1,9 @@
 shared.LoaderTitle = "Loading Script May take few minutes...";
 shared.LoaderKeyFrames = {
-    [1] = {10, 10},
-    [2] = {2, 30},
-    [3] = {3, 60},
-    [4] = {2, 100}
+    [1] = {30, 10},
+    [2] = {100, 30},
+    [3] = {300, 60},
+    [4] = {500, 100}
 };
 local v2 = {
     LoaderData = {
@@ -55,7 +55,7 @@ local v6 = CreateObject("Frame", {
     Name = "Main",
     Parent = v5,
     BackgroundColor3 = v2.LoaderData.Colors.Main,
-    BackgroundTransparency = 0.5,
+    BackgroundTransparency = 0.8,
     BorderSizePixel = 0,
     ClipsDescendants = true,
     Position = UDim2.new(0.5, 0, 0.5, 0),
