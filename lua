@@ -55,6 +55,7 @@ local v6 = CreateObject("Frame", {
     Name = "Main",
     Parent = v5,
     BackgroundColor3 = v2.LoaderData.Colors.Main,
+    BackgroundTransparency = 0.5,
     BorderSizePixel = 0,
     ClipsDescendants = true,
     Position = UDim2.new(0.5, 0, 0.5, 0),
@@ -62,51 +63,6 @@ local v6 = CreateObject("Frame", {
     Size = UDim2.new(0, 0, 0, 0)
 });
 v4(12, v6);
-
-
-
-
-
-local UserInputService = game:GetService("UserInputService")
-local draggingLoader = false
-local dragStartLoader = nil
-local startPosLoader = nil
-
-local function updateLoaderInput(input)
-    local delta = input.Position - dragStartLoader
-    v6.Position = UDim2.new(startPosLoader.X.Scale, startPosLoader.X.Offset + delta.X, startPosLoader.Y.Scale, startPosLoader.Y.Offset + delta.Y)
-end
-
-v6.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        draggingLoader = true
-        dragStartLoader = input.Position
-        startPosLoader = v6.Position
-        
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                draggingLoader = false
-            end
-        end)
-    end
-end)
-
-v6.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        dragStartLoader = input
-    end
-end)
-
-UserInputService.InputChanged:Connect(function(input)
-    if draggingLoader and input == dragStartLoader then
-        updateLoaderInput(input)
-    end
-end)
-
-
-
-
-
 
 
 local v7 = CreateObject("ImageLabel", {
